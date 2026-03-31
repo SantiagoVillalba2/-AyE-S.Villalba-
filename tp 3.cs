@@ -1,4 +1,5 @@
 ﻿// ejercicio 1
+Console.WriteLine("Ingrese un número entero");
 string ejercicio1(int N) {
 
     string resultado;
@@ -14,6 +15,7 @@ string ejercicio1(int N) {
 Console.WriteLine(ejercicio1(Convert.ToInt32(Console.ReadLine())));
 
 // ejercicio 2
+Console.WriteLine("Cuál es tu edad?");
 string ejercicio2(int edad)
 {
     string fiesta;
@@ -24,6 +26,7 @@ string ejercicio2(int edad)
 Console.WriteLine(ejercicio2(Convert.ToInt32(Console.ReadLine())));
 
 // ejercicio 3
+Console.WriteLine("Ingrese una contraseña");
 string ejercicio3(string contraseña)
 {
     string confirmacion;

@@ -1,18 +1,26 @@
 Ejercicio 1: Vocales
-Pide al usuario una frase. Cuenta cuántas vocales (a, e, i, o, u, mayúsculas y minúsculas) hay en la frase.
-Devuelva el numero de vocales total
+Pide al usuario una frase. 
+Cuenta cuántas vocales (a, e, i, o, u, mayúsculas y minúsculas) hay en la frase.
+Devuelva el numero de vocales total.
+
 Ejercicio 2: Invertir
 Pide al usuario una palabra o frase. 
 Invierte la cadena e imprímela. Por ejemplo, "hola" debe convertirse en "aloh".
+
 Ejercicio 3: Suma de dígitos
 Pide al usuario un número entero. 
 Calcula la suma de sus dígitos. Por ejemplo, si el usuario ingresa 123, la suma debe ser 1 + 2 + 3 = 6.  
+
 Ejercicio 4: El Censor de Palabras:
-Crea una cadena que contenga un párrafo largo. Pide al usuario una "palabra prohibida" y una "palabra de reemplazo". Muestra el texto resultante después de hacer el cambio.
+Crea una cadena que contenga un párrafo largo. 
+Pide al usuario una "palabra prohibida" y una "palabra de reemplazo". 
+Muestra el texto resultante después de hacer el cambio.
+
 Ejercicio 5: Analizador de Nombres
- Pide al usuario su nombre completo (Nombre y Apellido). El programa debe extraer y mostrar:
-Las iniciales (ej. "Juan Pérez" seria "J.P.").
+ Pide al usuario su nombre completo (Nombre y Apellido). 
+ El programa debe extraer y mostrar: Las iniciales (ej. "Juan Pérez" seria "J.P.").
 Solo el primer nombre.
 Solo el apellido.
+
   Ejercicio 6:  ¿Es un Palíndromo?
 Pide una palabra al usuario y determina si es un palíndromo (se lee igual de izquierda a derecha que de derecha a izquierda, como "reconocer" o "ana").

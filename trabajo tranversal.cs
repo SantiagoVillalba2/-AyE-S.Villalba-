@@ -48,4 +48,28 @@ for (int i = 5; i>-1; i--)
     }
 }
 
-// ejercicio E
+//ejercicio E
+Console.WriteLine("Ingresa 10 números");
+int num_max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("1/10");
+for(int i = 2; i <= 10; i++)
+{
+    Console.WriteLine($"{i}/10");
+    int num = Convert.ToInt32(Console.ReadLine());
+    if(num > num_max)
+    {
+        num_max = num;
+    }
+}
+Console.WriteLine($"el número más alto fue {num_max}");
+
+// ejercicio F
+Console.WriteLine("Ingresá tu nombre");
+string nombre = Console.ReadLine();
+for(int i = 0; i <= nombre.Length; i++)
+{
+    if(i == 0)
+    {
+
+    }
+}

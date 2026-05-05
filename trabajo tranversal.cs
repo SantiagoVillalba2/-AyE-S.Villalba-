@@ -1,4 +1,5 @@
-﻿// ejercicio a
+//bloque 1
+// ejercicio a
 for (int i = 1; i <= 100; i++)
 {
     if (i % 3 == 0)

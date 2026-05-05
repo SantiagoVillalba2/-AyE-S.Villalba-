@@ -60,7 +60,59 @@ try
     }
     Console.WriteLine(ejercicio3(Console.ReadLine()));
 }
-catch
+catch (ArgumentNullException)
 {
+    Console.WriteLine("Debe ingresar una contraseña");
+}
+catch (ArgumentException)
+{
+    Console.WriteLine("No está permitido usar espacios vacios");
+}
 
+// ejercicio 4
+Console.WriteLine("Ingrese un número entero");
+try
+{
+    string ejercicio4(int NUM)
+    {
+        string verificacion;
+        if (NUM % 2 == 0) { verificacion = "El número es par"; }
+        else { verificacion = "El número es impar"; }
+        return verificacion;
+    }
+    Console.WriteLine(ejercicio4(Convert.ToInt32(Console.ReadLine())));
+}
+catch (FormatException)
+{
+    Console.WriteLine("No podés ingresar texto");
+}
+catch (OverflowException)
+{
+    Console.WriteLine("Número demasiado grande");
+}
+
+//ejercicio 5
+Console.WriteLine("Cuál es tu edad?");
+Console.WriteLine("compro pochoclos?");
+try
+{
+    string ejercicio5(int numero, string compro)
+    {
+        string validacion;
+        if (numero > 65 && compro == "si") { validacion = "¡Felicidades! Tienes entrada gratuita al cine."; }
+        else { validacion = "Comprá la entrada o raja de acá"; }
+        return validacion;
+    }
+    Console.WriteLine(ejercicio5(Convert.ToInt32(Console.ReadLine()), Console.ReadLine()));
+} catch (ArgumentNullException)
+{
+    Console.WriteLine("No podés poner valores nulos");
+}
+catch (OverflowException)
+{
+    Console.WriteLine("Número demasiado grande");
+}
+catch(ArgumentException)
+{
+    Console.WriteLine("No podés ingresar espacios vacios");
 }

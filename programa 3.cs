@@ -11,24 +11,21 @@ for (int i = 0; i < palabra.Length; i++)
 {
     guiones += "_";
 }
-for (int i = 0; i < palabra.Length; i++)
-{
-    while (letra != palabra[i] && !adivina)
+
+    while (intentos > 0 && !adivina)
     {
         Console.WriteLine($"palabra: {guiones}");
         Console.WriteLine($"intentos restantes: {intentos}");
         Console.WriteLine("Ingresá una letra");
         letra = Convert.ToChar(Console.ReadLine());
-
+    for (int i = 0; i < palabra.Length; i++)
+    {
         if (letra == palabra[i])
         {
             nuevo += letra;
             encontro = true;
         }
-        else
-        {
-            nuevo += guiones[i];
-        }
+    }
         guiones = nuevo;
         if (!encontro)
         {
@@ -44,7 +41,6 @@ for (int i = 0; i < palabra.Length; i++)
             adivina = true;
         }
     }
-}
 
 Console.WriteLine("");
 if (adivina)

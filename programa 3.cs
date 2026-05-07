@@ -1,6 +1,5 @@
 string palabra = "playstation";
 string guiones = "";
-string nuevo = "";
 char letra = ' ';
 int intentos = 7;
 bool adivina = false;
@@ -17,7 +16,17 @@ while (intentos > 0 && !adivina)
     Console.WriteLine($"palabra: {guiones}");
     Console.WriteLine($"intentos restantes: {intentos}");
     Console.WriteLine("Ingresá una letra");
-    letra = Convert.ToChar(Console.ReadLine());
+    try
+    {
+        letra = Convert.ToChar(Console.ReadLine());
+    }
+    catch(FormatException)
+    {
+        Console.WriteLine("Tenés que ingresar algo en la consola");
+    }
+
+    string nuevo = "";
+    encontro = false;
     for (int i = 0; i < palabra.Length; i++)
     {
         

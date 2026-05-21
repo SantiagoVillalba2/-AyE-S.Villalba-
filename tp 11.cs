@@ -87,3 +87,40 @@ void while1()
     }
 }
 while1();
+
+Console.WriteLine("");
+Console.WriteLine("Ejercicio 7");
+void while2(int contador = 5)
+{
+    if (contador == 0)
+    {
+        Console.WriteLine("¡Listo para despegar!");
+        Console.WriteLine("¡Despegue!");
+        return;
+    }
+    else
+    {
+        Console.WriteLine(contador);
+        while2(contador - 1);
+    }
+}
+while2();
+
+Console.WriteLine("");
+Console.WriteLine("Ejercicio 8");
+void while3(int numerosec = 7)
+{
+    Console.WriteLine("Adiviná el número");
+    int intento = Convert.ToInt32(Console.ReadLine());
+    if(intento == 7)
+    {
+        Console.WriteLine("¡Felicidades! Adivinaste el número!");
+        return;
+    }
+    else
+    {
+        Console.WriteLine("¡Fallaste! Adivinalo de vuelta.");
+        while3();
+    }
+}
+while3();

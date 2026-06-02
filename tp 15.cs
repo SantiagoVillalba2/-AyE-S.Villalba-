@@ -1,28 +1,33 @@
-﻿int[,] matriz = {
+Console.WriteLine("Ejercicio 1");
+void ejercicio1()
+{
+    int[,] matriz = {
     {1,2,5},
     {4,6,7},
     {8,4,2}
 
 };
 
-for (int i = 0; i < 3; i++)
-{
-    for (int o = 0; o < 3; o++)
+    for (int i = 0; i < 3; i++)
     {
-        Console.Write(matriz[i, o] + "\t");
+        for (int o = 0; o < 3; o++)
+        {
+            Console.Write(matriz[i, o] + "\t");
+        }
+        Console.WriteLine("");
     }
-    Console.WriteLine("");
 }
+ejercicio1();
 
 Console.WriteLine("Ejercicio 2");
-void ejercicio2(int resultado)
+void ejercicio2()
 {
     int[,] matriz = {
     {10,20,30},
     {40,50,60},
     {70,80,90}
 };
-    resultado = 0;
+    int resultado = 0;
     for (int i = 0; i < 3; i++)
     {
         for (int p = 0; p < 3; p++)
@@ -32,5 +37,32 @@ void ejercicio2(int resultado)
         }
         Console.WriteLine("");
     }
+    Console.WriteLine($"La suma de todos los números es: {resultado}");
 }
 ejercicio2();
+
+Console.WriteLine("Ejercicio 3");
+void ejercicio3()
+{
+    int[,] matriz = {
+        {5,9,1,3},
+        {7,2,3,2},
+        {0,2,4,5},
+        {9,3,1,2}
+    };
+    for(int i = 0; i <4; i++)
+    {
+        for(int o = 0; o < 4; o++)
+        {
+            Console.Write(matriz[i, o] + "\t");
+        }
+        Console.WriteLine("");
+    }
+    Console.WriteLine("");
+    Console.WriteLine("Ingresa la coordenada de la fila");
+    int fila = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Ahora ingresá la coordenada de la columna");
+    int columna = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine($"El elemento en esas coordenadas es: {matriz[fila, columna]}");
+}
+ejercicio3();

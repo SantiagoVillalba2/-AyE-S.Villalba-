@@ -120,3 +120,52 @@ void ejercicio5()
     }
 }
 ejercicio5();
+
+void ejercicio6()
+{
+    int[,] traspuesta = new int[4, 4];
+    int[,] matriz = {
+        {10,45,5,7},
+        {4,6,14,65},
+        {9,4,1,78},
+        {37,23,17,32}
+    };
+
+    for (int i = 0; i < 4; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            traspuesta[o, i] = matriz[i, o];
+            Console.Write(matriz[o, i] + "\t");
+        }
+        Console.WriteLine("");
+    }
+}
+int contador = 0;
+Console.WriteLine("Ingrese un número para ver cuántas veces se repite");
+int num = Convert.ToInt16(Console.ReadLine());
+int[,] matriz = {
+   { 1, 5, 3, 5},
+   { 8, 5, 9, 2},
+   { 4, 5, 6, 7}
+};
+for(int i = 0; i<4; i++)
+{
+    for(int o = 0; o<4; o++)
+    {
+        Console.Write(matriz[i, o] + "\t");
+    }
+
+    Console.WriteLine();
+}
+for (int i = 0; i < 4; i++)
+{
+    for (int o = 0; o < 4; o++)
+    {
+        if (matriz[i,o] == num)
+        {
+            contador++;
+        }
+    }
+}
+    Console.WriteLine($"Ese número se repite {contador} veces");

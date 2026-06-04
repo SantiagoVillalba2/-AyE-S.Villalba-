@@ -17,7 +17,6 @@ void ejercicio1()
         Console.WriteLine("");
     }
 }
-ejercicio1();
 
 Console.WriteLine("Ejercicio 2");
 void ejercicio2()
@@ -39,7 +38,6 @@ void ejercicio2()
     }
     Console.WriteLine($"La suma de todos los números es: {resultado}");
 }
-ejercicio2();
 
 Console.WriteLine("Ejercicio 3");
 void ejercicio3()
@@ -50,9 +48,9 @@ void ejercicio3()
         {0,2,4,5},
         {9,3,1,2}
     };
-    for(int i = 0; i <4; i++)
+    for (int i = 0; i < 4; i++)
     {
-        for(int o = 0; o < 4; o++)
+        for (int o = 0; o < 4; o++)
         {
             Console.Write(matriz[i, o] + "\t");
         }
@@ -65,4 +63,60 @@ void ejercicio3()
     int columna = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine($"El elemento en esas coordenadas es: {matriz[fila, columna]}");
 }
-ejercicio3();
+void ejercicio4()
+{
+    int mayor = 0;
+    int[,] matriz = {
+        {10,45,5,7},
+        {4,6,14,65},
+        {9,4,1,78},
+        {37,23,17,32}
+    };
+
+    for (int i = 0; i < 4; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            Console.Write(matriz[i, o] + "\t");
+            if (matriz[i, o] > mayor)
+                mayor = matriz[i, o];
+        }
+        Console.WriteLine("");
+    }
+    Console.WriteLine($"el elemento más grande es: {mayor}");
+}
+
+Console.WriteLine("Ejercicio 5");
+void ejercicio5()
+{
+    int[,] matriz = {
+        {98,67,102,34},
+        {21,22,121,65},
+        {87,84,101,102},
+        {18,47,234,901}
+    };
+
+    int[] sumasFilas = new int[4];
+    int[] sumasColumnas = new int[4];
+
+    for (int i = 0; i < 4; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            Console.Write(matriz[i, o] + "\t");
+            sumasFilas[i] += matriz[i, o];
+            sumasColumnas[o] += matriz[i, o];
+        }
+        Console.WriteLine("");
+
+    }
+    for (int i = 0; i < sumasFilas.Length; i++)
+    {
+        Console.WriteLine($"Suma de fila: {sumasFilas[i]}");
+    }
+    for (int i = 0; i < sumasColumnas.Length; i++)
+    {
+        Console.WriteLine($"Suma de columna: {sumasColumnas[i]}");
+    }
+}
+ejercicio5();

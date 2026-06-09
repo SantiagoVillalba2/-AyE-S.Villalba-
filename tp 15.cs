@@ -1,4 +1,3 @@
-Console.WriteLine("Ejercicio 1");
 void ejercicio1()
 {
     int[,] matriz = {
@@ -17,7 +16,6 @@ void ejercicio1()
     }
 }
 
-Console.WriteLine("Ejercicio 2");
 void ejercicio2()
 {
     int[,] matriz = {
@@ -38,7 +36,6 @@ void ejercicio2()
     Console.WriteLine($"La suma de todos los números es: {resultado}");
 }
 
-Console.WriteLine("Ejercicio 3");
 void ejercicio3()
 {
     int[,] matriz = {
@@ -85,7 +82,6 @@ void ejercicio4()
     Console.WriteLine($"el elemento más grande es: {mayor}");
 }
 
-Console.WriteLine("Ejercicio 5");
 void ejercicio5()
 {
     int[,] matriz = {

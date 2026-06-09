@@ -5,7 +5,6 @@ void ejercicio1()
     {1,2,5},
     {4,6,7},
     {8,4,2}
-
 };
 
     for (int i = 0; i < 3; i++)
@@ -130,7 +129,17 @@ void ejercicio6()
         {9,4,1,78},
         {37,23,17,32}
     };
+    Console.WriteLine("Matriz original");
+    for(int i = 0; i < 4; i++)
+    {
+        for(int o = 0; o<4; o++)
+        {
+            Console.Write(matriz[i, o] + "\t");
+        }
+        Console.WriteLine();
+    }
 
+    Console.WriteLine("Matriz traspuesta");
     for (int i = 0; i < 4; i++)
     {
         for (int o = 0; o < 4; o++)
@@ -141,31 +150,89 @@ void ejercicio6()
         Console.WriteLine("");
     }
 }
-int contador = 0;
-Console.WriteLine("Ingrese un número para ver cuántas veces se repite");
-int num = Convert.ToInt16(Console.ReadLine());
-int[,] matriz = {
-   { 1, 5, 3, 5},
+
+void ejercicio7()
+{
+    int contador = 0;
+    int[,] matriz = {
+    { 1, 5, 3, 5},
    { 8, 5, 9, 2},
    { 4, 5, 6, 7}
-};
-for(int i = 0; i<4; i++)
-{
-    for(int o = 0; o<4; o++)
+        };
+    for (int i = 0; i < 3; i++)
     {
-        Console.Write(matriz[i, o] + "\t");
-    }
-
-    Console.WriteLine();
-}
-for (int i = 0; i < 4; i++)
-{
-    for (int o = 0; o < 4; o++)
-    {
-        if (matriz[i,o] == num)
+        for (int o = 0; o < 4; o++)
         {
-            contador++;
+            Console.Write(matriz[i, o] + "\t");
+        }
+
+        Console.WriteLine();
+    }
+    Console.WriteLine("Ingrese un número y te digo cuantas veces aparece en la matriz");
+    int num = Convert.ToInt32(Console.ReadLine());
+    for (int i = 0; i < 3; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            if (matriz[i, o] == num)
+            {
+                contador++;
+            }
+        }
+
+    }
+    Console.WriteLine($"Ese número aparece {contador} veces");
+}
+void ejercicio8()
+{
+    double suma = 0;
+    double[,] matriztras = new double[4, 4];
+    int[,] matriz = {
+        {34,12,9,16},
+        {4,56,15,85},
+        {9,4,1,78},
+        {37,23,17,32}
+    };
+    for (int i = 0; i < 4; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            suma += matriz[i, o];
         }
     }
+    double promedio = suma / 16;
+    Console.WriteLine("Matriz");
+    for (int i = 0; i < 4; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            Console.Write(matriz[o, i] + "\t");
+        }
+        Console.WriteLine("");
+    }
+
+    for (int i = 0; i < 4; i++)
+    {
+        for(int o = 0; o < 4; o++)
+        {
+            if (matriz[i,o] < promedio)
+            {
+                matriztras[i, o] = promedio;
+            }
+            else
+            {
+                matriztras[i, o] = matriz[i, o];
+            }
+        }
+    }
+    Console.WriteLine("Matriz nueva");
+    for (int i = 0; i < 4; i++)
+    {
+        for (int o = 0; o < 4; o++)
+        {
+            Console.Write(matriztras[o, i] + "\t");
+        }
+        Console.WriteLine("");
+    }
+
 }
-    Console.WriteLine($"Ese número se repite {contador} veces");

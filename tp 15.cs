@@ -59,6 +59,7 @@ void ejercicio3()
     int columna = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine($"El elemento en esas coordenadas es: {matriz[fila, columna]}");
 }
+
 void ejercicio4()
 {
     int mayor = 0;
@@ -114,7 +115,6 @@ void ejercicio5()
         Console.WriteLine($"Suma de columna: {sumasColumnas[i]}");
     }
 }
-ejercicio5();
 
 void ejercicio6()
 {

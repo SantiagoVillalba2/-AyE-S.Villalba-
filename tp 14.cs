@@ -34,6 +34,22 @@ for (int i = 0; i < nombrefruta.Length; i++)
     }
 }
 
-// ejercicio 3
-string[] palabras = { "hola", "bien", "locura", "pino" };
+void ejercicio3()
+{
+    int[] notas = { 8, 5, 7, 10, 9, 7, 3, 2, 10, 10 };
+    for (int i = 0; i < notas.Length; i++)
+    {
+        Console.Write(notas[i] + "\t");
+    }
+    Console.WriteLine("");
+    int sumatotal = 0;
+    for (int i = 0; i < notas.Length; i++)
+    {
+        sumatotal += notas[i];
+    }
+
+    int promedio = sumatotal / notas.Length;
+    Console.WriteLine($"Suma total de las notas: {sumatotal}");
+    Console.WriteLine($"Promedio general: {promedio}");
+}
 

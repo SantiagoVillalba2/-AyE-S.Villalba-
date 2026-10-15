@@ -1,0 +1,44 @@
+ejercicio 1
+Ingrese un número de dos cifras
+unidades: 7
+decenas: 9
+
+ejercicio 2
+Ingrese un número de 3 cifras
+Cifra central: 7
+
+ejercicio 3
+Ingrese un precio
+Precio con descuento: 45,92
+
+ejercicio 4
+Ingrese un número de dos cifras
+número dado vuelta: 9
+
+ejercicio 5
+Ingrese una fecha como un número de 6 dígitos
+El número de mes es: 20
+
+ejercicio 6
+Ingrese la longitud de los lados (medida en cm)
+el perimetro del cuadrado es de: 224
+el área del cuadrado es de: 3136cm²
+
+ejercicio 7
+Ingresá el valor de trabajo por hora y seguido de eso, ingresá las horas trabajadas
+El sueldo basado en el valor por hora y cantidad de horas trabajadas es de: 392
+
+ejercicio 8
+Ingrese la temperatura (medida en Fahrenheit)
+La conversión de grados Fahrenheit a grados Celsius es de: 253,33333333333331°C
+
+ejercicio 9
+Ingrese la hora, seguido de minutos y segundos del instante 1
+Ingrese la hora, seguido de minutos y segundos del instante 2
+La diferencia de segundos en los dos instantes es de: -67738 segundos
+
+ejercicio 10
+Ingreseonv un número entero de 3 dígitos
+unidades: 4
+decenas: 3
+centenas: 2

@@ -1,11 +1,17 @@
-﻿int num_descartar;
+﻿Console.WriteLine("programa N°4");
+Console.WriteLine("");
+Console.WriteLine("-----BALATRO-----");
+
 int cantidad;
-int opcion = 0;
-string palo;
-string numero;
-Random aleatorio = new Random();
-string[] palos = { "picas", "corazones", "treboles", "diamantes" };
-string[] numeross = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+int carta_descartada;
+string palo, numero;
+bool cartas_repartidas = false;
+bool seguimos = true;
+
+Random random = new Random();
+
+string[] palos = ["Picas", "Corazones", "Treboles", "Diamantes"];
+string[] numeros = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 string[] carta1 = new string[2];
 string[] carta2 = new string[2];
@@ -16,24 +22,102 @@ string[] carta6 = new string[2];
 string[] carta7 = new string[2];
 string[] carta8 = new string[2];
 
-void darcartas()
+while (seguimos)
 {
-    palo = palos[aleatorio.Next(0, 4)];
-    numero = numeross[aleatorio.Next(0, 13)];
+    Console.WriteLine("Elija una opción:");
+    Console.WriteLine("");
+    Console.WriteLine("1- Pedir cartas");
+    Console.WriteLine("2- Descartar cartas");
+    Console.WriteLine("3- Salir");
+
+    int opcion = Convert.ToInt32(Console.ReadLine());
+
+    switch (opcion)
+    {
+        case 1:
+            pedir_cartas();
+            cartas_repartidas = true;
+            Console.WriteLine("");
+            Console.WriteLine("Tus cartas:");
+            Console.WriteLine("");
+            mostrar_cartas();
+            break;
+
+        case 2:
+            if (cartas_repartidas)
+            {
+                descartar();
+            }
+            else
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Primero debes pedir cartas");
+            }
+            break;
+
+        case 3:
+            Console.WriteLine("Saliendo del programa...");
+            Console.WriteLine("Fin del juego");
+            seguimos = false;
+            break;
+
+        default:
+            Console.WriteLine("Opcion incorrecta");
+            break;
+    }
+}
+
+void pedir_cartas()
+{
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
     carta1 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta2 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta3 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta4 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta5 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta6 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta7 = [palo, numero];
+
+    palo = palos[random.Next(0, 4)];
+    numero = numeros[random.Next(0, 13)];
+    carta8 = [palo, numero];
 }
 
 void descartar()
 {
-    Console.WriteLine("Ingrese la cantidad de cartas que quiere descartar");
+    Console.WriteLine("");
+    Console.WriteLine("¿Cuantas cartas quiere descartar?");
     cantidad = Convert.ToInt32(Console.ReadLine());
-    for(int i = 1; i<= cantidad; i++)
+
+    for (int i = 1; i <= cantidad; i++)
     {
-        Console.WriteLine("Ingrese el número de carta que quiere descartar");
-        num_descartar = Convert.ToInt32(Console.ReadLine());
-        palo = palos[aleatorio.Next(0, 4)];
-        numero = numeross[aleatorio.Next(0, 13)];
-        switch (num_descartar)
+        Console.WriteLine("");
+        Console.WriteLine("Ingrese el numero de carta a descartar");
+        carta_descartada = Convert.ToInt32(Console.ReadLine());
+
+        palo = palos[random.Next(0, 4)];
+        numero = numeros[random.Next(0, 13)];
+
+        switch (carta_descartada)
         {
             case 1:
                 carta1 = [palo, numero];
@@ -60,8 +144,24 @@ void descartar()
                 carta8 = [palo, numero];
                 break;
             default:
-                Console.WriteLine("Opción no válida");
+                Console.WriteLine("Error, no se encontro esa carta");
                 break;
         }
     }
+    Console.WriteLine("");
+    Console.WriteLine("Cartas actualizadas:");
+    Console.WriteLine("");
+    mostrar_cartas();
+}
+
+void mostrar_cartas()
+{
+    Console.WriteLine($"{carta1[1]} de {carta1[0]}");
+    Console.WriteLine($"{carta2[1]} de {carta2[0]}");
+    Console.WriteLine($"{carta3[1]} de {carta3[0]}");
+    Console.WriteLine($"{carta4[1]} de {carta4[0]}");
+    Console.WriteLine($"{carta5[1]} de {carta5[0]}");
+    Console.WriteLine($"{carta6[1]} de {carta6[0]}");
+    Console.WriteLine($"{carta7[1]} de {carta7[0]}");
+    Console.WriteLine($"{carta8[1]} de {carta8[0]}");
 }
